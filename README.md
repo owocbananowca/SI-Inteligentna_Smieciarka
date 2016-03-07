@@ -1,2 +1,2 @@
-# SI-Inteligentna_-mieciarka
+# SI-Inteligentna_-Smieciarka
 Projekt na SI
