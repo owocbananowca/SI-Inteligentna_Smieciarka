@@ -1,0 +1,92 @@
+start:
+4 0 0 0 2 49 0
+4 0 0 0 2 49 0
+4 0 0 0 2 49 0
+4 0 0 0 2 49 0
+Tabela ocen: 53 53 53 53
+Suma ocen: 212
+Wylosowany numer: 20
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 13
+Suma ocen: 212
+Wylosowany numer: 9
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 13
+Suma ocen: 212
+Wylosowany numer: 96
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 41
+Suma ocen: 212
+Wylosowany numer: 33
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 24
+Suma ocen: 212
+Wylosowany numer: 61
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 34
+Suma ocen: 212
+Wylosowany numer: 23
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 14
+Suma ocen: 212
+Wylosowany numer: 96
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 43
+Suma ocen: 212
+Wylosowany numer: 57
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 31
+Suma ocen: 212
+Wylosowany numer: 43
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 21
+Suma ocen: 212
+Wylosowany numer: 86
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 43
+Suma ocen: 212
+Wylosowany numer: 97
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 41
+Suma ocen: 212
+Wylosowany numer: 97
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 42
+Suma ocen: 212
+Wylosowany numer: 18
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 14
+Suma ocen: 206
+Wylosowany numer: 66
+szanse wylosowania: 24 25 24
+Wylosowane osobniki: 31
+Suma ocen: 200
+Wylosowany numer: 45
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 23
+Suma ocen: 200
+Wylosowany numer: 29
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 24
+Suma ocen: 200
+Wylosowany numer: 15
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 12
+Suma ocen: 200
+Wylosowany numer: 45
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 23
+Suma ocen: 200
+Wylosowany numer: 54
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 34
+Suma ocen: 200
+Wylosowany numer: 4
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 14
+
+4 -2 0 0 4 47 0
+4 -2 0 0 4 47 0
+4 -2 0 0 4 48 0
+4 -2 0 0 4 48 0
+Wybrany osobnik: 0
