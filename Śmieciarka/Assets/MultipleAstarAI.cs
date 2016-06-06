@@ -1,49 +1,67 @@
 ﻿using UnityEngine;
 using System.Collections;
-//Note this line, if it is left out, the script won't know that the class 'Path' exists and it will throw compiler errors
-//This line should always be present at the top of scripts which use pathfinding
+using System.Collections.Generic;
 using Pathfinding;
 using System;
 
-public class AstarAI : MonoBehaviour
+public class MultipleAstarAI : MonoBehaviour
 {
-    //The point to move to
-    public Vector3 target;
-
+    public GameObject[] targets;
+    public Vector3[] vectorTargets;
     private Seeker seeker;
-
+    private bool pathComplete;
     //The calculated path
     public Path path;
-
+    public Path[] paths;
+    OnPathDelegate config = null;
+    // Use this for initialization
+    //The waypoint we are currently moving towards
+    private int currentWaypoint = 0;
     //The AI's speed per second
     public float speed = 1;
 
     //The max distance from the AI to a waypoint for it to continue to the next waypoint
     public float nextWaypointDistance = 3;
 
-    //The waypoint we are currently moving towards
-    private int currentWaypoint = 0;
-
     bool gora = false;
     bool prawo = false;
     bool lewo = false;
     bool dol = false;
 
-    float lastx=0;
-    float lasty=0;
+    float lastx = 0;
+    float lasty = 0;
     //1 gora, 2, prawo, 3, dol, 4 lewo
     int przod = 1;
-
-    public void Start()
+    void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Smietniki").transform.position;
+        targets = GameObject.FindGameObjectsWithTag("Smietniki");
+        int ilosc = targets.Length;
+        vectorTargets = new Vector3[ilosc+1];
+        paths = new Path[ilosc];
         seeker = GetComponent<Seeker>();
+        int i = 1;
+        vectorTargets[0] = seeker.transform.position;
+        foreach (var e in targets)
+        {
+            vectorTargets[i] = e.transform.position;
+            i++;
+        }     
 
-        //Start a new path to the targetPosition, return the result to the OnPathComplete function
-        seeker.StartPath(transform.position, target, OnPathComplete);
+        //WaypointPath d = new WaypointPath(vectorTargets, OnPathComplete);
+        //d.StartPath();
+        for (i = 0; i < ilosc; i++)
+        {
+            paths[i] = ABPath.Construct(vectorTargets[i], vectorTargets[i + 1], OnPathComplete);
+            if (config != null) config(paths[i]);
+        }
+            //Start a new path to the targetPosition, return the result to the OnPathComplete function
+       for(i=0; i<ilosc; i++)
+            seeker.StartPath(paths[i]);
+        
+
     }
 
-    public void OnPathComplete(Path p)
+    void OnPathComplete(Path p)
     {
         Debug.Log("Yay, we got a path back. Did it have an error? " + p.error);
         if (!p.error)
@@ -51,6 +69,22 @@ public class AstarAI : MonoBehaviour
             path = p;
             //Reset the waypoint counter
             currentWaypoint = 0;
+            pathComplete = true;
+        }
+    }
+
+    // Update is called once per frame
+    void OnPathComplete(WaypointPath p)
+    {
+        if (p.HasError())
+        {
+            Debug.LogError("Noes, could not find the path!");
+            return;
+        }
+        else
+        {
+            List<Vector3> vp = p.vectorPath;
+            for (int i = 0; i < vp.Count - 1; i++) Debug.DrawLine(vp[i], vp[i + 1], Color.red, 20);
         }
     }
 
@@ -62,9 +96,11 @@ public class AstarAI : MonoBehaviour
             return;
         }
 
-        if (currentWaypoint >= path.vectorPath.Count)
+        if (currentWaypoint >= path.vectorPath.Count && pathComplete == true)
         {
             Debug.Log("End Of Path Reached");
+            Start();
+            pathComplete = false;
             return;
         }
 
@@ -213,10 +249,8 @@ public class AstarAI : MonoBehaviour
         gora = false;
         dol = false;
         lewo = false;
-        //transform.Rotate(Vector3.back * Time.deltaTime * 20, Space.World);
-        print("start:" + Math.Round(roznica.x,0) + " " + Math.Round(roznica.y,0) + " " + roznica.x + " " + roznica.y);
-        transform.Translate(dir, Space.World);
 
+        transform.Translate(dir, Space.World);
         //Check if we are close enough to the next waypoint
         //If we are, proceed to follow the next waypoint
         if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < nextWaypointDistance)
@@ -225,11 +259,15 @@ public class AstarAI : MonoBehaviour
             return;
         }
     }
+    public void OnDisable()
+    {
+        seeker.pathCallback -= OnPathComplete;
+    }
 
     void OnTriggerEnter2D(Collider2D coll)
     {
         // Food?
-        if (coll.name.StartsWith("Smietniki"))
+        if (coll.name.StartsWith("SmietnikAluminium") || coll.name.StartsWith("SmietnikPapier") || coll.name.StartsWith("SmietnikPlastik"))
         {
             // Get longer in next Move call
 
