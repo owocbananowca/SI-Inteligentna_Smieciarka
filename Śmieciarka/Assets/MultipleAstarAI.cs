@@ -12,8 +12,6 @@ public class MultipleAstarAI : MonoBehaviour
     private bool pathComplete;
     //The calculated path
     public Path path;
-    public Path[] paths;
-    OnPathDelegate config = null;
     // Use this for initialization
     //The waypoint we are currently moving towards
     private int currentWaypoint = 0;
@@ -37,7 +35,6 @@ public class MultipleAstarAI : MonoBehaviour
         targets = GameObject.FindGameObjectsWithTag("Smietniki");
         int ilosc = targets.Length;
         vectorTargets = new Vector3[ilosc+1];
-        paths = new Path[ilosc];
         seeker = GetComponent<Seeker>();
         int i = 1;
         vectorTargets[0] = seeker.transform.position;
@@ -49,14 +46,9 @@ public class MultipleAstarAI : MonoBehaviour
 
         //WaypointPath d = new WaypointPath(vectorTargets, OnPathComplete);
         //d.StartPath();
-        for (i = 0; i < ilosc; i++)
-        {
-            paths[i] = ABPath.Construct(vectorTargets[i], vectorTargets[i + 1], OnPathComplete);
-            if (config != null) config(paths[i]);
-        }
             //Start a new path to the targetPosition, return the result to the OnPathComplete function
        for(i=0; i<ilosc; i++)
-            seeker.StartPath(paths[i]);
+            seeker.StartPath(vectorTargets[0], vectorTargets[1], OnPathComplete);
         
 
     }

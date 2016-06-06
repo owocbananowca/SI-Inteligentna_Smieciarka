@@ -1,92 +1,92 @@
 start:
-6 -2 -4 0 4 42 0
-6 -2 -4 0 4 43 0
-6 -2 -4 0 4 42 0
-6 -2 -4 0 4 42 0
-Tabela ocen: 42 43 42 42
-Suma ocen: 169
-Wylosowany numer: 8
+8 -2 -2 0 2 44 30
+8 -2 -2 0 0 45 0
+8 -2 -2 0 2 44 30
+8 -2 -2 0 0 45 0
+Tabela ocen: 48 49 48 49
+Suma ocen: 194
+Wylosowany numer: 58
 szanse wylosowania: 24 25 24
+Wylosowane osobniki: 32
+Suma ocen: 194
+Wylosowany numer: 8
+szanse wylosowania: 24 24 25
+Wylosowane osobniki: 13
+Suma ocen: 194
+Wylosowany numer: 48
+szanse wylosowania: 24 24 25
+Wylosowane osobniki: 21
+Suma ocen: 192
+Wylosowany numer: 23
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 13
+Suma ocen: 192
+Wylosowany numer: 52
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 34
+Suma ocen: 192
+Wylosowany numer: 38
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 23
+Suma ocen: 192
+Wylosowany numer: 22
+szanse wylosowania: 25 25 25
 Wylosowane osobniki: 12
-Suma ocen: 129
-Wylosowany numer: 85
-szanse wylosowania: 0 33 32
+Suma ocen: 192
+Wylosowany numer: 80
+szanse wylosowania: 25 25 25
 Wylosowane osobniki: 43
-Suma ocen: 170
-Wylosowany numer: 88
-szanse wylosowania: 25 24 25
-Wylosowane osobniki: 42
-Suma ocen: 168
-Wylosowany numer: 65
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 31
-Suma ocen: 127
-Wylosowany numer: 18
-szanse wylosowania: 33 33 0
-Wylosowane osobniki: 12
-Suma ocen: 169
-Wylosowany numer: 87
-szanse wylosowania: 25 24 24
-Wylosowane osobniki: 42
-Suma ocen: 168
-Wylosowany numer: 1
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 12
-Suma ocen: 168
+Suma ocen: 192
 Wylosowany numer: 50
 szanse wylosowania: 25 25 25
-Wylosowane osobniki: 24
-Suma ocen: 168
-Wylosowany numer: 72
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 32
-Suma ocen: 168
-Wylosowany numer: 79
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 41
-Suma ocen: 168
-Wylosowany numer: 12
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 12
-Suma ocen: 168
-Wylosowany numer: 94
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 43
-Suma ocen: 164
-Wylosowany numer: 49
-szanse wylosowania: 24 25 24
-Wylosowane osobniki: 24
-Suma ocen: 168
-Wylosowany numer: 54
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 31
-Suma ocen: 168
-Wylosowany numer: 87
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 43
-Suma ocen: 168
-Wylosowany numer: 8
-szanse wylosowania: 25 25 25
-Wylosowane osobniki: 14
-Suma ocen: 168
-Wylosowany numer: 37
-szanse wylosowania: 25 25 25
 Wylosowane osobniki: 21
-Suma ocen: 86
-Wylosowany numer: 40
-szanse wylosowania: 1 48 48
-Wylosowane osobniki: 23
-Suma ocen: 168
+Suma ocen: 98
+Wylosowany numer: 24
+szanse wylosowania: 48 1 48
+Wylosowane osobniki: 13
+Suma ocen: 192
 Wylosowany numer: 39
 szanse wylosowania: 25 25 25
 Wylosowane osobniki: 24
-Suma ocen: 127
-Wylosowany numer: 74
-szanse wylosowania: 33 0 33
-Wylosowane osobniki: 41
+Suma ocen: 192
+Wylosowany numer: 14
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 13
+Suma ocen: 192
+Wylosowany numer: 49
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 23
+Suma ocen: 145
+Wylosowany numer: 75
+szanse wylosowania: 33 33 0
+Wylosowane osobniki: 42
+Suma ocen: 192
+Wylosowany numer: 50
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 23
+Suma ocen: 192
+Wylosowany numer: 24
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 12
+Suma ocen: 192
+Wylosowany numer: 76
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 42
+Suma ocen: 192
+Wylosowany numer: 1
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 14
+Suma ocen: 192
+Wylosowany numer: 54
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 34
+Suma ocen: 192
+Wylosowany numer: 22
+szanse wylosowania: 25 25 25
+Wylosowane osobniki: 13
 
-6 -2 -4 0 4 42 0
-6 -2 -4 0 4 42 0
-6 -2 -4 0 4 42 0
-6 -2 -4 0 4 42 0
+8 -2 -2 0 2 44 30
+8 -2 -2 0 2 44 30
+8 -2 -2 0 2 44 30
+8 -2 -2 0 2 44 30
 Wybrany osobnik: 0
