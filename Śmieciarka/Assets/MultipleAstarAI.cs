@@ -43,12 +43,8 @@ public class MultipleAstarAI : MonoBehaviour
             vectorTargets[i] = e.transform.position;
             i++;
         }     
-
-        //WaypointPath d = new WaypointPath(vectorTargets, OnPathComplete);
-        //d.StartPath();
             //Start a new path to the targetPosition, return the result to the OnPathComplete function
-       for(i=0; i<ilosc; i++)
-            seeker.StartPath(vectorTargets[0], vectorTargets[1], OnPathComplete);
+        seeker.StartPath(vectorTargets[0], vectorTargets[1], OnPathComplete);
         
 
     }
@@ -62,21 +58,6 @@ public class MultipleAstarAI : MonoBehaviour
             //Reset the waypoint counter
             currentWaypoint = 0;
             pathComplete = true;
-        }
-    }
-
-    // Update is called once per frame
-    void OnPathComplete(WaypointPath p)
-    {
-        if (p.HasError())
-        {
-            Debug.LogError("Noes, could not find the path!");
-            return;
-        }
-        else
-        {
-            List<Vector3> vp = p.vectorPath;
-            for (int i = 0; i < vp.Count - 1; i++) Debug.DrawLine(vp[i], vp[i + 1], Color.red, 20);
         }
     }
 
@@ -242,6 +223,7 @@ public class MultipleAstarAI : MonoBehaviour
         dol = false;
         lewo = false;
 
+ 
         transform.Translate(dir, Space.World);
         //Check if we are close enough to the next waypoint
         //If we are, proceed to follow the next waypoint
