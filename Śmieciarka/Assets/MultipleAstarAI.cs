@@ -30,6 +30,7 @@ public class MultipleAstarAI : MonoBehaviour
     float lasty = 0;
     //1 gora, 2, prawo, 3, dol, 4 lewo
     int przod = 1;
+
     void Start()
     {
         targets = GameObject.FindGameObjectsWithTag("Smietniki");
@@ -42,9 +43,10 @@ public class MultipleAstarAI : MonoBehaviour
         {
             vectorTargets[i] = e.transform.position;
             i++;
-        }     
-            //Start a new path to the targetPosition, return the result to the OnPathComplete function
-        seeker.StartPath(vectorTargets[0], vectorTargets[1], OnPathComplete);
+        }
+
+        //Start a new path to the targetPosition, return the result to the OnPathComplete function
+        seeker.StartPath(seeker.transform.position, vectorTargets[1], OnPathComplete);
         
 
     }
